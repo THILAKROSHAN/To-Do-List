@@ -1,28 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
     <link rel="stylesheet" href="to do list.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="" href="to">
 </head>
 <body>
     <section>
-    <h1>TO DO LIST</h1>
-<div class="inadd">
-    <div class="input">
-         <input id="input">
-    </div>
-
-
-    
-    <div class="add">
-         <button onclick="add()">+</button>
-    </div>
-</div>
-    <div class="list-container">
-         <ul id="list-container"></ul>
-    </div>
-</section>
-<script src="to do list.js"></script>
+        <h1>TO DO LIST</h1>
+        <div class="toggle-container">
+            <div class="toggle">
+                <input type="checkbox" id="dark-mode-toggle" onchange="toggleDarkMode()">
+                <label class="toggle-label" for="dark-mode-toggle"></label>
+            </div>
+        </div>
+        <div class="inadd">
+            <div class="input">
+                <input id="input" placeholder="Add a new task...">
+            </div>
+            <div class="add">
+                <button onclick="add()">+</button>
+            </div>
+        </div>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Search tasks..." onkeyup="searchTasks()">
+        </div>
+        <div class="list-container">
+            <ul id="list-container"></ul>
+        </div>
+        <button class="clear-all" onclick="clearAll()">Clear All Tasks</button>
+    </section>
+    <script src="to do list.js"></script>
 </body>
 </html>
